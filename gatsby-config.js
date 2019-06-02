@@ -2,12 +2,12 @@ const mdxFeed = require('gatsby-mdx/feed')
 
 const configuration = {
   // the name of your website
-  title: 'Jonathan Filbert',
+  title: 'Jonathan Filbert | Blog',
   // the description of the website (eg. what shows on Google)
   description: "Jonathan Filbert's blog",
   // a short bio shown at the bottom of your blog posts
   // It should complete the sentence: Written by Jonathan Filbert ...
-  shortBio: '',
+  shortBio: ', a lifelong learner.',
   // a longer bio showing on the landing page of the blog
   bio: `Design. Code. Everything in between.`,
   author: 'Jonathan Filbert',
@@ -16,18 +16,19 @@ const configuration = {
   siteUrl: 'http://localhost:8000',
   social: {
     // leave the social media you do not want to appear as empty strings
-    twitter: '',
+    twitter: 'jonathanfilbert',
     medium: '@jonathanflisyanto',
     facebook: '',
-    github: '',
-    linkedin: '',
-    instagram: '',
+    github: 'jonathanfilbert',
+    linkedin: 'Jonathanflisyanto',
+    instagram: 'jonathanfilbertt',
   },
 }
 
 module.exports = {
   siteMetadata: configuration,
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-mdx',
